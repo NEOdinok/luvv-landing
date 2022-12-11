@@ -1,0 +1,26 @@
+$breakpoints: (
+	"mobile-min": 320px,
+	"mobile-max": 770px,
+	"md-min": 771px,
+	"md-max": 1120px,
+);
+
+@mixin portrait {
+	@media screen and (max-width: map-get($breakpoints, "mobile-max")) {
+		@content;
+	}
+}
+
+@mixin landscape {
+	// and (max-width: map-get($breakpoints, "md-max")) 
+	@media screen and (min-width: map-get($breakpoints, "md-min")) {
+		@content;
+	}
+}
+
+//flexible one 
+@mixin breakpoint($bp: 0) {
+	@media (min-width: $bp) {
+		@content;
+	}
+}
