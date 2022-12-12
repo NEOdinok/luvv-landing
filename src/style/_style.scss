@@ -8,9 +8,9 @@ body {
 }
 
 header {
-  position: fixed;
+  position: absolute;//fixed 
   background-color: transparent;
-  z-index: 5;// comment
+  z-index: 5;// commenjt
 
   @include portrait {
     margin: 2rem 2rem 0 2rem;
@@ -29,8 +29,10 @@ header {
     justify-content: flex-start;
 
     .svg-content {
-      margin: 1.5% 0 1.5% 17rem;
-      width: 15%;
+      margin: .5% 0 0 18rem;
+      width: 35%;
+      height: 85%;
+
       margin-left: 10%;
     }
   }
@@ -43,14 +45,15 @@ main {
 
   .cover-section {
     position: relative;
+    z-index: 1;
 
     .imgs-wrapper {
       .img-item.center {
         background-image: url('/src/img/glasses.JPG');
       }
 
-      .img-item.right {
-        background-image: url('/src/img/msbhv.JPG');
+      .img-item.left {
+        background-image: url('/src/img/center.JPG');
       }
 
       .img-item.mobile {
@@ -68,7 +71,7 @@ main {
 
       .imgs-wrapper {
         .img-item.center,
-        .img-item.right {
+        .img-item.left {
           display: none;
         }
 
@@ -86,6 +89,40 @@ main {
   }
 
   @include landscape {
+    .cover-section {
+      position: relative;
+      height: 100vh;
+
+      .imgs-wrapper {
+        display: flex;
+        gap: 1%;
+        height: calc(100vh - 9%);
+
+        .img-item {
+          flex: 1;
+          background-repeat: no-repeat;
+          object-fit: cover;
+        }
+
+        .img-item.center {
+          background-position: top 10% right 30%;
+          background-size: max(80vh, 90%);
+          padding-top: calc(100vh + 10vh);
+        }
+
+        .img-item.mobile {
+          background-position: top 0 left 40%;
+          background-size: max(80vh, 90%);
+          padding-top: calc(100vh + 10vh);
+        }
+
+        .img-item.left {
+          background-position: top 10% left 40%;
+          background-size: max(80vh, 90%);
+          padding-top: calc(100vh + 10vh);
+        }
+      }
+    }
   }
 
   .running-line-wrapper {
@@ -94,80 +131,145 @@ main {
     background: $black;
 
     @include portrait {
-      // left: -2rem;
-      bottom: 5rem;
-      height: 5.5rem;
-      // width: calc(100% + 4rem);
+      bottom: 8%;
+      left: 0;
+      height: 6%;
       width: 100%;
+
+      .additional {
+        display: none;
+      }
+    
+      .running-line-content {
+        position: relative;
+        height: 100%;
+  
+        div {
+          display: flex;
+          gap: .5rem;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          overflow: hidden;
+          width: 100%;
+          transform: translate(100%, 0);
+      
+          p {
+            font-family: 'Inconsolata', monospace;;
+            margin: 0;
+            color: $soft-white;
+          }
+  
+          p.line-text {
+            font-size: 1.3rem;
+          }
+  
+          p.line-square {
+            font-size: .5rem;
+          }
+        }
+        .ticker-wrapper__first-half, .ticker-wrapper__second-half {
+          height: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          position: absolute;
+          right: 0;
+          animation: ticker $duration infinite linear forwards;
+        }
+  
+        .ticker-wrapper__second-half {
+          animation: $duration ticker math.div($duration, 2) infinite linear forwards;
+        }
+  
+        @keyframes ticker {
+          0% {
+            transform: translate(100%, 0);
+          }
+        
+          50% {
+            transform: translate(0, 0);
+          }
+        
+          100% {
+            transform: translate(-100%, 0);
+          }
+        }
+      }
+
     }
 
     @include landscape {
-      bottom: 0;
+      bottom: 0%;
       left: 0;
-      height: 5.5rem;
+      height: 6%;
       width: 100%;
-    }
+
+      .dilimiter {
+        display: none;
+      }
     
-    .running-line-content {
-      position: relative;
-
-      div {
-        display: flex;
-        gap: 1rem;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        overflow: hidden;
-        width: 100%;
-        height: 6.5rem;
-        transform: translate(100%, 0);
-    
-        p {
-          font-family: 'Inconsolata', monospace;;
-          color: $soft-white;
-        }
-
-        p.line-text {
-          font-size: 2rem;
-        }
-
-        p.line-square {
-          font-size: 1rem;
-        }
-      }
-      .ticker-wrapper__first-half, .ticker-wrapper__second-half {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        position: absolute;
-        top: 0;
-        right: 0;
-        height: 5.5rem;
-        animation: ticker $duration infinite linear forwards;
-      }
-
-      .ticker-wrapper__second-half {
-        animation: $duration ticker math.div($duration, 2) infinite linear forwards;
-      }
-
-      @keyframes ticker {
-        0% {
+      .running-line-content {
+        position: relative;
+        height: 100%;
+  
+        div {
+          display: flex;
+          gap: 1rem;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          overflow: hidden;
+          width: 100%;
           transform: translate(100%, 0);
-        }
       
-        50% {
-          transform: translate(0, 0);
+          p {
+            font-family: 'Inconsolata', monospace;;
+            margin: 0;
+            color: $soft-white;
+          }
+  
+          p.line-text {
+            font-size: 1.5rem;
+          }
+  
+          p.line-square {
+            font-size: .5rem;
+          }
         }
-      
-        100% {
-          transform: translate(-100%, 0);
+        .ticker-wrapper__first-half, .ticker-wrapper__second-half {
+          height: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          position: absolute;
+          right: 0;
+          animation: ticker $duration infinite linear forwards;
+        }
+  
+        .ticker-wrapper__second-half {
+          animation: $duration ticker math.div($duration, 2) infinite linear forwards;
+        }
+  
+        @keyframes ticker {
+          0% {
+            transform: translate(100%, 0);
+          }
+        
+          50% {
+            transform: translate(0, 0);
+          }
+        
+          100% {
+            transform: translate(-100%, 0);
+          }
         }
       }
+
     }
   }
-
-
 }
 
 
