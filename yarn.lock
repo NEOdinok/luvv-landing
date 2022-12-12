@@ -4705,6 +4705,11 @@ sass-loader@^13.0.2:
     klona "^2.0.4"
     neo-async "^2.6.2"
 
+sass-math@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/sass-math/-/sass-math-1.0.0.tgz#b30b2ab81639daae66f5c367bc2d85ab411e7169"
+  integrity sha512-sNRWEW71zu9HfgtIvUQYi5FTXys10x/wtOFtaBFg2yTgdDiGlxyr448suw8ZKAEHX4T2X1uxnrpcAVwIerDTKQ==
+
 sass@^1.55.0:
   version "1.56.1"
   resolved "https://registry.yarnpkg.com/sass/-/sass-1.56.1.tgz#94d3910cd468fd075fa87f5bb17437a0b617d8a7"
@@ -5390,7 +5395,7 @@ webpack-sources@^3.2.3:
   resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-3.2.3.tgz#2d4daab8451fd4b240cc27055ff6a0c2ccea0cde"
   integrity sha512-/DyMEOrDgLKKIG0fmvtz+4dUX/3Ghozwgm6iPp8KRhvn+eQf9+Q7GWxVNMk3+uCPWfdXYC4ExGBckIXdFEfH1w==
 
-webpack@^5.74.0:
+webpack@^5.75.0:
   version "5.75.0"
   resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.75.0.tgz#1e440468647b2505860e94c9ff3e44d5b582c152"
   integrity sha512-piaIaoVJlqMsPtX/+3KTTO6jfvrSYgauFVdt8cr9LTHKmcq/AMd4mhzsiP7ZF/PGRNPGA8336jldh9l2Kt2ogQ==
