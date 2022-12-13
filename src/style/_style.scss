@@ -1,7 +1,7 @@
 @use 'sass:math';
 
 body {
-	font-family: 'Montserrat';
+	font-family: 'Noto Sans Mono', monospace;
 	background-color: $soft-white;
 	color: $black;
 	font-size: 62.5%;
@@ -17,12 +17,12 @@ header.nav-bar {
 	background-color: transparent;
 	z-index: 5; // commenjt
 
-	@include portrait {
-		margin: 2rem 2rem 0 2rem;
-		width: calc(100vw - 4rem);
+	@include small {
+		// margin: 2rem 2rem 0 2rem;
+		// width: calc(100vw - 4rem);
 	}
 
-	@include landscape {
+	@include large {
 		width: 100vw;
     padding: 20px 120px;
     height: $header-height;
@@ -56,7 +56,7 @@ main {
 	}
 	// }
 
-	@include portrait {
+	@include small {
 		.cover-section {
 			// width: calc(100vw - 4rem);
 			height: calc(100vh - 4rem);
@@ -82,7 +82,7 @@ main {
 		}
 	}
 
-	@include landscape {
+	@include large {
 		.cover-section {
 			position: relative;
 			height: calc(100vh - $header-height);
@@ -131,7 +131,7 @@ main {
 		z-index: 5;
 		background: $black;
 
-		@include portrait {
+		@include small {
 			bottom: 8%;
 			left: 0;
 			height: 6%;
@@ -202,7 +202,7 @@ main {
 			}
 		}
 
-		@include landscape {
+		@include large {
 			bottom: 0%;
 			left: 0;
 			height: 6%;

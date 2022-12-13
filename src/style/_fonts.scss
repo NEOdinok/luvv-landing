@@ -5,13 +5,13 @@
   src: url('https://fonts.cdnfonts.com/css/vogue');
 
 }
+
 @font-face {
-  font-family: 'Montserrat';
-  src: url('fonts/montserrat-v23-latin_cyrillic-700.woff2') format('woff2'),
-    url('fonts/montserrat-v23-latin_cyrillic-700.woff') format('woff');
+  font-family: 'Noto Serif Display', serif;
+  src: url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@500;700&display=swap');;
 }
 
 @font-face {
-  font-family: 'Inconsolata', monospace;;
-  src: url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+  font-family: 'Noto Sans Mono', monospace;
+  src: url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap');;
 }
