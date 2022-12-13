@@ -10,22 +10,29 @@ body {
 header.nav-bar {
 	height: $header-height;
 	padding: 4px;
+
 	.nav-bar__logo {
 		height: 100%;
 	}
-	// position: absolute; fixed
+
 	background-color: transparent;
 	z-index: 5; // commenjt
 
 	@include small {
 		// margin: 2rem 2rem 0 2rem;
 		// width: calc(100vw - 4rem);
+		background-color: transparent;
+		position: absolute;
+		margin: 2rem 2rem 0 2rem;
+		height: 15%;
+		width: calc(100% - 4rem);
+		display: flex;
+		justify-content: center;
 	}
 
 	@include large {
 		width: 100vw;
     padding: 20px 120px;
-    height: $header-height;
 		background-color: $soft-white;
 		display: flex;
 		justify-content: flex-start;
@@ -40,28 +47,30 @@ main {
 	.cover-section {
 		position: relative;
 		z-index: 1;
-
-		// .imgs-wrapper {
-		//   .img-item.center {
-		//     background-image: url('/src/img/glasses.JPG');
-		//   }
-
-		//   .img-item.left {
-		//     background-image: url('/src/img/center.JPG');
-		//   }
-
-		//   .img-item.mobile {
-		//     background-image: url('/src/img/black.JPG');
-		//   }
 	}
-	// }
 
 	@include small {
 		.cover-section {
 			// width: calc(100vw - 4rem);
+			height: 100vh;
 			height: calc(100vh - 4rem);
 			margin: 2rem;
 			overflow: hidden;
+
+			// .imgs-wrapper {
+			// 	.img-item.center,
+			// 	.img-item.left {
+			// 		display: none;
+			// 	}
+
+			// 	.img-item.mobile {
+			// 		background-repeat: no-repeat;
+			// 		height: 100%;
+			// 		width: 100%;
+			// 		object-fit: cover;
+			// 		object-position: center;
+			// 	}
+			// }
 
 			.imgs-wrapper {
 				.img-item.center,
@@ -69,14 +78,21 @@ main {
 					display: none;
 				}
 
-				.img-item.mobile {
-					background-repeat: no-repeat;
-					// background-size: calc(100vh - 4rem);
-					background-size: 80vh;
-					object-fit: cover;
-					// background-position: center;
-					background-position: top 0 left 40%;
-					padding-top: calc(100vh - 4rem);
+				display: flex;
+				gap: 1%;
+        height: 100%;
+				.img-item {
+					flex: 1;
+					flex-basis: 0;
+					height: 100%;
+					// background-repeat: no-repeat;
+					// object-fit: cover;
+					img {
+						height: 100%;
+						width: 100%;
+						object-fit: cover;
+						object-position: center;
+					}
 				}
 			}
 		}
@@ -104,24 +120,6 @@ main {
 						object-position: center;
 					}
 				}
-
-				// .img-item.center {
-				//   background-position: top 10% right 30%;
-				//   background-size: max(80vh, 90%);
-				//   padding-top: calc(100vh + 10vh);
-				// }
-
-				// .img-item.mobile {
-				//   background-position: top 0 left 40%;
-				//   background-size: max(80vh, 90%);
-				//   padding-top: calc(100vh + 10vh);
-				// }
-
-				// .img-item.left {
-				//   background-position: top 10% left 40%;
-				//   background-size: max(80vh, 90%);
-				//   padding-top: calc(100vh + 10vh);
-				// }
 			}
 		}
 	}
