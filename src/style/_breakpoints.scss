@@ -61,8 +61,8 @@ $breakpoints: (
 }
 
 //flexible one 
-@mixin breakpoint($bp: 0) {
-	@media (min-width: $bp) {
+@mixin breakpoint($min: 0, $max: 0) {
+	@media screen and (min-width: $min) and (max-width: $max)  {
 		@content;
 	}
 }
