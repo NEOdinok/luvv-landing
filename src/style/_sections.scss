@@ -5,10 +5,6 @@ main section.section {
     line-height: 21px;
 
     .section__wrapper {
-        .section__image {
-            display: none;
-        }
-
         .section__text-block {
             width: 100%;
             position: relative;
@@ -47,6 +43,22 @@ main section.section {
     }
 
     @include large {
+        .section__wrapper {
+            display: grid;
+            margin: 100px;
+            gap: 1rem;
+            grid-template-columns: 1fr 1fr;
 
+            .section__image {
+                height: 100%;
+
+                img {
+                    object-fit: cover;
+                    margin: 5%;
+                    width: 90%;
+                    max-height: 90%;
+                }
+           }
+        }
     }
 }

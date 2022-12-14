@@ -6,12 +6,23 @@ main section {
 
 	.section__wrapper {
 		@include s-mobile {
+			.section__image,
+			.section__image img {
+					display: none;
+			}
+
 			width: 100%;
 			max-width: 300px;
 			margin: 0 auto;
+
 		}
 
 		@include breakpoint(480px, 1199px) {
+			.section__image,
+			.section__image img {
+					display: none;
+			}
+
 			width: calc(100% - 4rem);
 			margin: 0 2rem;
 		}
@@ -56,6 +67,20 @@ main section {
 
 				.break-sm {
 						display: none;
+				}
+			}
+
+			@include desktop {
+				.break {
+					display: none;
+				}
+
+				.break-sm {
+					display: none;
+				}
+
+				.break-mobile {
+					display: none;
 				}
 			}
 		}
