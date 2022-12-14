@@ -1,0 +1,154 @@
+@use 'sass:math';
+
+footer {
+	position: relative;
+
+	.footer__running-line-wrapper {
+		width: 100%;
+		overflow: hidden;
+		background: transparents;
+		margin-top: 200px;
+
+		@include small {
+			margin-bottom: 10px;
+			height: 100px;
+
+			.running-line__content {
+				height: 100%;
+				position: relative;
+
+				div {
+					display: flex;
+					gap: 1em;
+					flex-direction: row;
+					justify-content: space-between;
+					align-items: center;
+					overflow: hidden;
+					width: 100%;
+					transform: translate(100%, 0);
+
+					p {
+						font-family: 'Noto Serif Display', serif;
+						font-weight: 900;
+						margin: 0;
+						font-size: 100px;
+						color: $luvv-blue;
+					}
+				}
+				.ticker-wrapper__first-half,
+				.ticker-wrapper__second-half {
+					height: 100%;
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					align-items: center;
+					position: absolute;
+					right: 0;
+					animation: ticker $duration infinite linear forwards;
+				}
+
+				.ticker-wrapper__second-half {
+					animation: $duration ticker math.div($duration, 2) infinite
+						linear forwards;
+				}
+
+				@keyframes ticker {
+					0% {
+						transform: translate(100%, 0);
+					}
+
+					50% {
+						transform: translate(0, 0);
+					}
+
+					100% {
+						transform: translate(-100%, 0);
+					}
+				}
+			}
+		}
+
+		@include large {
+			height: 250px;
+			width: 100%;
+
+			.running-line__content {
+				position: relative;
+				height: 100%;
+
+				div {
+					display: flex;
+					gap: 1em;
+					flex-direction: row;
+					justify-content: space-between;
+					align-items: center;
+					overflow: hidden;
+					width: 100%;
+					transform: translate(100%, 0);
+
+					p {
+						font-family: 'Noto Serif Display', serif;
+						font-weight: 900;
+						margin: 0;
+						font-size: 270px;
+						color: $luvv-blue;
+					}
+
+					p.line-text {
+						font-size: 320px;
+					}
+
+				}
+				.ticker-wrapper__first-half,
+				.ticker-wrapper__second-half {
+					height: 100%;
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					align-items: center;
+					position: absolute;
+					right: 0;
+					animation: ticker $duration infinite linear forwards;
+				}
+
+				.ticker-wrapper__second-half {
+					animation: $duration ticker math.div($duration, 2) infinite
+						linear forwards;
+				}
+
+				@keyframes ticker {
+					0% {
+						transform: translate(100%, 0);
+					}
+
+					50% {
+						transform: translate(0, 0);
+					}
+
+					100% {
+						transform: translate(-100%, 0);
+					}
+				}
+			}
+		}
+	}
+
+	.footer__terms-wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		color: $luvv-blue;
+
+		@include small {
+		}
+
+		@include large {
+
+			.footer__terms {
+				font-size: 10px;
+				margin: 50px 0 15px 0;
+			}
+		}
+	}
+}
