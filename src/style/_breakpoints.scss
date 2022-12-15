@@ -14,8 +14,6 @@ $breakpoints: (
 	"desktop-min": 1200px
 );
 
-
-//remove
 @mixin small {
 	@media screen and (max-width: map-get($breakpoints, "tab-max")) {
 		@content;
@@ -27,8 +25,6 @@ $breakpoints: (
 		@content;
 	}
 }
-
-/////////////////
 
 @mixin s-mobile {
 	@media screen and (max-width: map-get($breakpoints, "s-mob-max")) {

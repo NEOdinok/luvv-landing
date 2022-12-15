@@ -65,28 +65,5 @@ section.dye--section {
     }
 }
 
-section.contacts--section {
-    display: relative;
-    width: 100%;
-
-    @include large {
-        margin: 200px auto;
-
-        .contacts__wrapper {
-            margin: 0 120px;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-
-            .contacts__main {
-
-            }
-        }
-    }
-
-    @include small {
-
-    }
-}
 
 
