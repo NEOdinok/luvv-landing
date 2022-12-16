@@ -47,9 +47,23 @@ section.dye--section {
     @include large {
         .section__wrapper {
             display: grid;
+            overflow: visible;
             margin: 100px;
             gap: 1rem;
             grid-template-columns: 1fr 1fr;
+
+            .section__text-block {
+                .text-block__header {
+                }
+
+                .text-block__main-text {
+                    padding-left: 20px;
+
+                    .main-text__right {
+                        min-width: 185px;
+                    }
+                }
+            }
 
             .section__image {
                 height: 100%;

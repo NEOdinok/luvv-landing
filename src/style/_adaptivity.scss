@@ -5,15 +5,19 @@ main section {
 	line-height: 21px;
 
 	.section__wrapper {
+		transition: width 200ms ease-in;
+
 		@include s-mobile {
 			.section__image,
 			.section__image img {
 					display: none;
 			}
-
-			width: 100%;
-			max-width: 300px;
+			// width: 100%;
+			width: 300px;
 			margin: 0 auto;
+			.break-m {
+				display: none;
+			}
 
 		}
 
@@ -77,15 +81,11 @@ main section {
 			}
 
 			@include desktop {
-				.break {
-					display: none;
-				}
-
 				.break-sm {
 					display: none;
 				}
 
-				.break-mobile {
+				.break-md {
 					display: none;
 				}
 			}
