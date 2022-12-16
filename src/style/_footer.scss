@@ -3,6 +3,38 @@
 footer {
 	position: relative;
 
+	.footer__btn {
+		@include large {
+			.circle {
+				background-color: black;
+				border-radius: 100%;
+				height: 120px;
+				aspect-ratio: 1/1;
+				position: absolute;
+				top: 140px;
+				left: 540px;
+				z-index: 5;
+
+				.circle__wrapper {
+					height: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					.circle__arrow {
+						height: 45px;
+						aspect-ratio: 1/1;
+					}
+				}
+			}
+		}
+
+		@include small {
+			display: none;// defined in a different place, positioned fixed
+		}
+
+	}
+
 	.footer__upper {
 		width: 100%;
 		font-family: 'Noto Serif Display', serif;

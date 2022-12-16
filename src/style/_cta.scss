@@ -1,0 +1,32 @@
+.cta {
+	position: fixed;
+	bottom: 20px;
+	width: 100%;
+	z-index: 5;
+
+	.cta__wrapper {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+
+		.cta__btn {
+			height: 40px;
+			width: 165px;
+			border-radius: 5px;
+			background-color: black;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			p.cta__text {
+				padding-bottom: 2px;// for font to look good
+				font-family: 'Noto Sans Mono', monospace;
+				font-weight: 400;
+				color: $soft-white;
+				font-size: 18px;
+			}
+		}
+	}
+}

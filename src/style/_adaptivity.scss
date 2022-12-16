@@ -40,9 +40,15 @@ main section {
 
 			@include mobile {
 				// max-width: 460px;
+				font-size: 13px;
+				line-height: 17px;
 
 				.break-sm {
 						display: none;
+				}
+
+				.break-md {
+					display: none;
 				}
 			}
 

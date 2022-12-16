@@ -117,7 +117,8 @@ main {
 		@include small {
 			bottom: 8%;
 			left: 0;
-			height: 6%;
+			// height: 6%;
+			height: 8%;
 			width: 100%;
 
 			.additional {
@@ -139,7 +140,8 @@ main {
 					transform: translate(100%, 0);
 
 					p {
-						font-family: 'Inconsolata', monospace;
+						font-family: 'Noto Sans Mono', monospace;
+						font-weight: 400;
 						margin: 0;
 						color: $soft-white;
 					}
@@ -189,6 +191,7 @@ main {
 			bottom: 0%;
 			left: 0;
 			height: 6%;
+			height: 8%;
 			width: 100%;
 
 			.dilimiter {
@@ -209,7 +212,8 @@ main {
 					transform: translate(100%, 0);
 
 					p {
-						font-family: 'Inconsolata', monospace;
+						font-family: 'Noto Sans Mono', monospace;
+						font-weight: 400;
 						margin: 0;
 						color: $soft-white;
 					}
