@@ -4,8 +4,12 @@ section.dye--section {
     margin-bottom: 5rem;
     font-size: 16px;
     line-height: 21px;
+    display: flex;
+    justify-content: center;
 
     .section__wrapper {
+        max-width: 1000px;
+
         .section__text-block {
             width: 100%;
             position: relative;
@@ -20,63 +24,31 @@ section.dye--section {
                 padding-bottom: 10px;
                 border-bottom: 2px $grey-line solid;
             }
+
             .text-block__main-text {
                 display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                // font-size: 13px;
-                // line-height: 17px;
+                flex-direction: column;
+                gap: .5rem;
                 padding-top: 10px;
 
-                // .break {
-                //     display: none;
-                // }
+                .main-text__row {
+                    display: flex;
+                    flex-direction: row;
 
-                .main-text__left {
-                    flex: 2;
-                }
+                    .row__left {
+                        flex: 3;
+                    }
 
-                .main-text__right {
-                    flex: 1;
-                    text-align: right;
-                }
-            }
-        }
-    }
-
-    @include large {
-        .section__wrapper {
-            display: grid;
-            overflow: visible;
-            margin: 100px;
-            gap: 1rem;
-            grid-template-columns: 1fr 1fr;
-
-            .section__text-block {
-                .text-block__header {
-                }
-
-                .text-block__main-text {
-                    padding-left: 20px;
-
-                    .main-text__right {
-                        min-width: 185px;
+                    .row__right {
+                        text-align: right;
+                        min-width: 200px;
+                        flex: 1;
                     }
                 }
             }
-
-            .section__image {
-                height: 100%;
-
-                img {
-                    object-fit: cover;
-                    margin: 5%;
-                    width: 90%;
-                    max-height: 90%;
-                }
-           }
         }
     }
+
 }
 
 

@@ -1,60 +1,58 @@
 $breakpoints: (
-	"s-mob-min": 320px,
-	"s-mob-max": 479px,
+	//mobile
+	"mobile-min": 320px,
+	"mobile-max": 479px,
 
-	"mob-min": 480px,
-	"mob-max": 639px,
+	//tablet
+	"tablet-min": 480px,
+	"tablet-max": 930px,
 
-	"s-tab-min": 640px,
-	"s-tab-max": 959px,
+	//laptop
+	"laptop-min": 931px,
+	"laptop-max": 1024px,
 
-	"tab-min": 960px,
-	"tab-max": 1199px,
-
-	"desktop-min": 1200px
+	//wide
+	"wide-min": 1025px,
 );
 
-@mixin small {
-	@media screen and (max-width: map-get($breakpoints, "tab-max")) {
+@mixin portrait {
+	//tab-max
+	@media screen and (max-width: map-get($breakpoints, "tablet-max")) {
 		@content;
 	}
 }
 
-@mixin large {
-	@media screen and (min-width: map-get($breakpoints, "desktop-min")) {
-		@content;
-	}
-}
-
-@mixin s-mobile {
-	@media screen and (max-width: map-get($breakpoints, "s-mob-max")) {
+@mixin landscape {
+	//desktop-min
+	@media screen and (min-width: map-get($breakpoints, "laptop-min")) {
 		@content;
 	}
 }
 
 @mixin mobile {
-	@media screen and (min-width: map-get($breakpoints, "mob-min")) and (max-width: map-get($breakpoints, "mob-max")) {
-		@content;
-	}
-}
-
-@mixin s-tablet {
-	@media screen and (min-width: map-get($breakpoints, "s-tab-min")) and (max-width: map-get($breakpoints, "s-tab-max")) {
+	@media screen and (max-width: map-get($breakpoints, "mobile-max")) {
 		@content;
 	}
 }
 
 @mixin tablet {
-	@media screen and (min-width: map-get($breakpoints, "tab-min")) and (max-width: map-get($breakpoints, "tab-max")) {
+	@media screen and (min-width: map-get($breakpoints, "tablet-min")) and (max-width: map-get($breakpoints, "tablet-max")) {
 		@content;
 	}
 }
 
-@mixin desktop {
-	@media screen and (min-width: map-get($breakpoints, "desktop-min")) {
+@mixin laptop {
+	@media screen and (min-width: map-get($breakpoints, "laptop-min")) and (max-width: map-get($breakpoints, "laptop-max")) {
 		@content;
 	}
 }
+
+@mixin wide {
+	@media screen and (min-width: map-get($breakpoints, "wide-min")) {
+		@content;
+	}
+}
+
 
 //flexible one 
 @mixin breakpoint($min: 0, $max: 0) {

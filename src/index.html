@@ -46,12 +46,14 @@
 			</div>
 		</div>
 
-		<header class="nav-bar">
-			<img class="nav-bar__logo" src="/src/img/luvv-logo.png" alt="">
+		<header>
+			<div class="header__wrapper">
+				<img class="header__logo" src="/src/img/luvv-logo.png" alt="">
+			</div>
 		</header>
 
 		<main>
-			<div id="cover--section" class="cover-section">
+			<section id="cover--section" class="cover-section">
 				<div class="imgs-wrapper">
 					<div class="img-item left">
 						<img src="/src/img/center.JPG" alt="" />
@@ -64,59 +66,31 @@
 					</div>
 				</div>
 				<div class="running-line-wrapper">
-					<div class="running-line-content">
-						<div class="ticker-wrapper__first-half">
-							<p class="line-text first">luvv</p>
-							<p class="line-square">■</p>
-							<p class="line-text">стрижки</p>
-							<p class="line-square">■</p>
-							<p class="line-text">окрашивания</p>
-							<p class="line-square">■</p>
-							<p class="line-square dilimiter"></p>
 
-							<p class="line-text additional">тонирование</p>
-							<p class="line-square additional">■</p>
-							<p class="line-text additional">уход</p>
-							<p class="line-square additional">■</p>
-							<p class="line-square additional"></p>
-						</div>
-						<div class="ticker-wrapper__second-half">
-							<p class="line-text">luvv</p>
-							<p class="line-square">■</p>
-							<p class="line-text">стрижки</p>
-							<p class="line-square">■</p>
-							<p class="line-text">окрашивания</p>
-							<p class="line-square">■</p>
-							<p class="line-square dilimiter"></p>
-
-							<p class="line-text additional">тонирование</p>
-							<p class="line-square additional">■</p>
-							<p class="line-text additional">уход</p>
-							<p class="line-square additional">■</p>
-							<p class="line-square additional"></p>
-						</div>
-					</div>
 				</div>
-			</div>
+			</section>
 
       <section class="haircut--section">
         <div class="section__wrapper">
           <div class="section__text-block">
 						<p class="text-block__header">Стрижки</p>
 						<div class="text-block__main-text">
-							<div class="main-text__left">
-								стрижка<br>
-								стрижка кончиков<br>
-								(на сухие волосы)<br>
-								стрижка челки<br>
-								укладка
+
+							<div class="main-text__row">
+								<div class="row__left">стрижка</div>
+								<div class="row__right">4 000 ₽</div>
 							</div>
-							<div class="main-text__right">
-								4 000 ₽<br>
-								2 000 ₽<br>
-								<br>
-								2 000 ₽<br>
-								3 500 ₽
+							<div class="main-text__row">
+								<div class="row__left">стрижка кончиков (на сухие волосы)</div>
+								<div class="row__right">2 000 ₽</div>
+							</div>
+							<div class="main-text__row">
+								<div class="row__left">стрижка челки</div>
+								<div class="row__right">2 000 ₽</div>
+							</div>
+							<div class="main-text__row">
+								<div class="row__left">укладка</div>
+								<div class="row__right">3 500 ₽</div>
 							</div>
 						</div>
 					</div>
@@ -126,23 +100,13 @@
           <div class="section__text-block">
 						<p class="text-block__header">Уходы</p>
 						<div class="text-block__main-text">
-							<div class="main-text__left">
-								масляное обертывание<br>
-								(la biosthetique<br>
-								“Франция”)<br>
-								<br class="br-uhod">
-								протеиновый уход<br>
-								(acidic bonding 
-								concentrate<br>
-								redken “США”)<br>
-								<br class="br-uhod">
+							<div class="main-text__row">
+								<div class="row__left">масляное обертывание (la biosthetique “Франция”)</div>
+								<div class="row__right">5 000 ₽</div>
 							</div>
-							<div class="main-text__right">
-								5 000 ₽<br>
-								<br>
-								<br>
-								<br clas="br-uhod">
-								4 000 ₽<br>
+							<div class="main-text__row">
+								<div class="row__left">протеиновый уход (acidic bonding concentrate redken “США”)</div>
+								<div class="row__right">4 000 ₽</div>
 							</div>
 						</div>
 					</div>
@@ -157,7 +121,23 @@
           <div class="section__text-block">
 						<p class="text-block__header">Окрашивания <br class="break-mobile"> Redken/Davines</p>
 						<div class="text-block__main-text">
-							<div class="main-text__left dye">
+							<div class="main-text__row">
+								<div class="row__left">сложное окрашивание (Airtouch/шатуш/балаяж/полное осветление</div>
+								<div class="row__right">13 500 - 19 500 ₽</div>
+							</div>
+							<div class="main-text__row">
+								<div class="row__left">тонирование</div>
+								<div class="row__right">5 600 - 9 600 ₽</div>
+							</div>
+							<div class="main-text__row">
+								<div class="row__left">контуринг</div>
+								<div class="row__right">6 700 - 9 700 ₽</div>
+							</div>
+							<div class="main-text__row">
+								<div class="row__left">контуринг + тонирование</div>
+								<div class="row__right">8 900 - 14 00 ₽</div>
+							</div>
+							<!-- <div class="main-text__left dye">
 								сложное окрашивание<br>
 								(Airtouch/шатуш/балаяж/полное<br class="break-m">
 								осветление)<br>
@@ -181,36 +161,27 @@
 								6 700 - <br class="break-sm">9 700 ₽<br>
 								<br class="break-sm">
 								8 900 - <br class="break-sm">14 400 ₽<br>
-							</div>
+							</div> -->
 						</div>
 					</div>
           <div class="section__text-block">
 						<p class="text-block__header">Окрашивания <br class="break-mobile"> Matrix / Londa</p>
 						<div class="text-block__main-text">
-							<div class="main-text__left dye">
-								сложное окрашивание<br>
-								(Airtouch/шатуш/балаяж/полное<br class="break-m">
-								осветление)<br>
-								<br class="break-sm">
-								тонирование<br>
-								<br class="break-sm">
-								<br class="break-sm">
-								контуринг<br>
-								<br class="break-sm">
-								<br class="break-sm">
-								контуринг + тонирование
+							<div class="main-text__row">
+								<div class="row__left">сложное окрашивание (Airtouch/шатуш/балаяж/полное осветление</div>
+								<div class="row__right">11 500 - 16 500 ₽</div>
 							</div>
-							<div class="main-text__right">
-								11 500 - <br class="break-sm">16 000 ₽<br>
-								<br>
-								<br class="break-m">
-								<br class="break-sm">
-							  4 300 - <br class="break-sm">7 300 ₽<br>
-								<br class="break-sm">
-								5 700 - <br class="break-sm">8 300 ₽<br>
-								<br class="break-sm">
-								7 100 - <br class="break-sm">11 300 ₽<br>
-								<br class="break-sm">
+							<div class="main-text__row">
+								<div class="row__left">тонирование</div>
+								<div class="row__right">4 300 - 7 300 ₽</div>
+							</div>
+							<div class="main-text__row">
+								<div class="row__left">контуринг</div>
+								<div class="row__right">5 700 - 8 300 ₽</div>
+							</div>
+							<div class="main-text__row">
+								<div class="row__left">контуринг + тонирование</div>
+								<div class="row__right">7 100 - 11 300 ₽</div>
 							</div>
 						</div>
 					</div>
@@ -228,22 +199,7 @@
 			</div>
 
 			<div class="footer__upper">
-				<div class="footer__running-line-wrapper">
-					<div class="running-line-content">
-						<div class="ticker-wrapper__first-half">
-							<p class="line-text first">Запись</p>
-							<p class="line-text dilimiter"></p>
-							<p class="line-text additional">Запись</p>
-							<p class="line-text dilimiter additional"></p>
-						</div>
-						<div class="ticker-wrapper__second-half">
-							<p class="line-text first">Запись</p>
-							<p class="line-text dilimiter"></p>
-							<p class="line-text first additional">Запись</p>
-							<p class="line-text dilimiter additional"></p>
-						</div>
-					</div>
-				</div>
+				<!-- // -->
 			</div>
 
 			<div class="footer__lower">
@@ -262,6 +218,7 @@
 					</div>
 				</div>
 			</div>
+
 			<div class="footer__terms">luvv 2022. Nikita. Lena. Lera.</div>
 		</footer>
 	</body>

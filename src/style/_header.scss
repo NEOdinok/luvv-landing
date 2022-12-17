@@ -1,0 +1,65 @@
+header {
+	height: $header-height;
+	background-color: transparent;
+	display: flex;
+	z-index: 5;
+
+	.header__wrapper {
+		position: relative;
+		display: flex;
+
+		.header__logo {
+			object-fit: scale-down;
+			width: 100%;
+		}
+	}
+
+	@include portrait {
+		& {
+			position: absolute;
+			margin: 0.5rem 2rem 0 2rem;
+			width: calc(100% - 4rem);
+			justify-content: center;
+		}
+
+		.header__wrapper {
+			.header__logo {
+				object-fit: scale-down;
+				width: 100%;
+				max-width: 500px;
+			}
+		}
+
+	}
+
+	@include landscape {
+		& {
+			position: relative;
+			padding: 10px 100px;
+			background-color: $soft-white;
+			justify-content: flex-start;
+		}
+
+		.header__wrapper {
+			.header__logo {
+				object-fit: scale-down;
+			}
+		}
+	}
+
+	@include laptop {
+		.header__wrapper {
+			.header__logo {
+				max-width: 150px;
+			}
+		}
+	}
+
+	@include wide {
+		.header__wrapper {
+			.header__logo {
+				max-width: 250px;
+			}
+		}
+	}
+}
