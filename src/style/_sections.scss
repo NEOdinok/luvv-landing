@@ -1,9 +1,7 @@
 section.haircut--section,
 section.dye--section {
     height: 100%;
-    margin-bottom: 5rem;
-    font-size: 16px;
-    line-height: 21px;
+		padding: 5rem 0;
     display: flex;
     justify-content: center;
 
@@ -28,7 +26,7 @@ section.dye--section {
             .text-block__main-text {
                 display: flex;
                 flex-direction: column;
-                gap: .5rem;
+                gap: 1rem;
                 padding-top: 10px;
 
                 .main-text__row {
@@ -41,7 +39,6 @@ section.dye--section {
 
                     .row__right {
                         text-align: right;
-                        min-width: 200px;
                         flex: 1;
                     }
                 }
@@ -49,6 +46,108 @@ section.dye--section {
         }
     }
 
+}
+
+@include portrait {
+	.section__wrapper {
+		width: calc(100% - 4rem);
+		margin: 0 2rem;
+
+		.section__image,
+		.section__image img {
+				display: none;
+		}
+
+		.section__text-block {
+			.text-block__main-text {
+				min-width: 185px;
+
+				.main-text__row {
+					.row__left {
+					}
+					.row__right {
+					}
+				}
+			}
+		}
+	}
+}
+
+@include landscape {
+	.section__wrapper {
+		padding: 0 2%;
+		display: grid;
+		gap: 1rem;
+
+		.section__image {
+			display: flex;
+			align-items: center;
+
+			img {
+				object-fit: cover;
+				height: 100%;
+				max-width: 90%;
+			}
+		}
+
+		.section__text-block {
+			.text-block__main-text {
+				padding-left: 1.5rem;
+
+				.main-text__row {
+					.row__right {
+						min-width: 200px;
+
+						.br--mobile {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.haircut--section {
+		.section__wrapper {
+			grid-template-columns: 4fr 3fr;//here
+
+			.section__image {
+				justify-content: flex-end;
+			}
+
+		}
+	}
+
+	.dye--section {
+		.section__wrapper {
+			grid-template-columns: 3fr 4fr;//here
+
+			.section__image {
+				justify-content: flex-start;
+			}
+		}
+	}
+}
+
+@include mobile {
+	.section__wrapper {
+		font-size: 14px;
+
+		.section__text-block {
+			.text-block__main-text {
+				.main-text__row {
+					.row__right {
+						min-width: 80px;
+					}
+				}
+			}
+		}
+	}
+
+	.haircut--section, 
+	.dye--section {
+		font-size: 14px;
+	}
 }
 
 

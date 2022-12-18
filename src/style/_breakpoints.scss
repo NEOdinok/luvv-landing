@@ -17,14 +17,16 @@ $breakpoints: (
 
 @mixin portrait {
 	//tab-max
-	@media screen and (max-width: map-get($breakpoints, "tablet-max")) {
+	@media screen 
+	and (max-width: map-get($breakpoints, "tablet-max")) {
 		@content;
 	}
 }
 
 @mixin landscape {
 	//desktop-min
-	@media screen and (min-width: map-get($breakpoints, "laptop-min")) {
+	@media screen
+	and (min-width: map-get($breakpoints, "laptop-min")) {
 		@content;
 	}
 }
