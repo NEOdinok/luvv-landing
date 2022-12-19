@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
+    "aos": "^2.3.4",
     "sass-math": "^1.0.0",
     "waypoints": "^4.0.1"
   }

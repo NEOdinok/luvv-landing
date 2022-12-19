@@ -1,16 +1,16 @@
 import './index.html';
 import './index.scss';
-// import './libs/jquery.waypoints'
-// import code from './img/code.png'
-import { mult, sum } from './modules/calc';
 
-//defaults
-// const imgWrap = document.querySelector('.img');
-// const img = new Image();
+import AOS from 'aos';
+AOS.init();
 
-// img.src = code;
-// img.width = 700;
-// imgWrap.append(img);
-
-// console.log(mult(3, 4));
-// console.log(sum(3, 4));
+$(function() {
+  $(document).scroll(function(){
+      if($(this).scrollTop() >= $('#footer').offset().top - 650) {
+          document.getElementById('footer__cta').classList.add('round');
+          document.getElementById('cta__wrapper').classList.add('round');
+      } else {
+          document.getElementById('footer__cta').classList.remove('round');
+      }
+  });
+});
