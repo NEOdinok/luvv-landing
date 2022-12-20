@@ -1,31 +1,15 @@
-@font-face {
-  font-family: 'Noto Sans Mono', monospace;
-  src: url('/src/fonts/NotoSansMono-Regular.ttf') format('truetype');
-  font-weight: 400;
-};
-
-@font-face {
-  font-family: 'Noto Sans Mono', monospace;
-  src: url('/src/fonts/NotoSansMono-SemiBold.ttf') format('truetype');
-  font-weight: 600;
-};
-
-@font-face {
-  font-family: 'Noto Sans Mono', monospace;
-  src: url('/src/fonts/NotoSansMono-Bold.ttf') format('truetype');
-  font-weight: 700;
-};
-
-
-
-@font-face {
-  font-family: 'Noto Serif Display', serif;
-  src: url('/src/fonts/NotoSerifDisplay-Medium.ttf') format('truetype');
-  font-weight: 500;
-};
-
-@font-face {
-  font-family: 'Noto Serif Display', serif;
-  src: url('/src/fonts/NotoSerifDisplay-Black.ttf') format('truetype');
-  font-weight: 900;
+@mixin font-face($family, $name, $weight) {
+  @font-face {
+    font-family: $family;
+    src: local($name), url('/src/fonts/' + $family + '/' + $name + '.ttf') format('truetype');
+    font-weight: $weight;
+    font-style: normal;
+    font-display: swap;
+  }
 }
+
+@include font-face('RobotoMono', 'RobotoMono-Bold', bold);
+@include font-face('RobotoMono', 'RobotoMono-SemiBold', 600);
+@include font-face('RobotoMono', 'RobotoMono-Medium', 500);
+@include font-face('RobotoMono', 'RobotoMono-Regular', normal);
+@include font-face('NotoSerifDisplay', 'NotoSerifDisplay-Black', 900);
