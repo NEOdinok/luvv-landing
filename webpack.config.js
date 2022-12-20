@@ -55,11 +55,8 @@ module.exports = {
         ],
       },
       {
-        test: /\.woff2?$/i,
+        test: /\.(jpe?g|svg|png|gif|ico|eot|ttf|woff2?)(\?v=\d+\.\d+\.\d+)?$/i,
         type: 'asset/resource',
-        generator: {
-          filename: 'fonts/[name][ext]'
-        }
       },
       {
         test: /\.(jpe?g|png|webp|gif|svg)$/i,
